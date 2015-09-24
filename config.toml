@@ -1,0 +1,4 @@
+baseurl = "/"
+languageCode = "de"
+title = "Friedrichshain hilft"
+theme = "fhilft"
