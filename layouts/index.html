@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="de" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<html class="no-js" lang="{{ if isset .Params "languagecode" }}{{ .Params.languagecode }}{{ else }}{{ .Site.LanguageCode }}{{ end }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -7,9 +7,11 @@
 
   <meta name="viewport" content="width=device-width" />
 
-  <base href="{{ .Site.BaseURL }}">
+<!--
+ <base href="{{ .Site.BaseURL }}">
+-->
 
-  <title>{{ .Title }}</title>
+  <title>{{ .Title }} | Friedrichshain hilft</title>
   <meta name="description" content="Die Initiative 'Friedrichshain Hilft' hilft Geflüchteten im Berliner Bezirk Friedrichshain">
   <meta name="keywords" content="Rufgees,Welcome,Flüchtlinge,Geflüchtete,Hilfe,Friedrichshain,Berlin">
 
@@ -18,54 +20,172 @@
   {{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
 
   <meta name="generator" content="Hugo 0.13" />
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-  <link type="text/css" rel="stylesheet" href="css/styles.css" />
+  <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css" />
 </head>
-
 <body>
-  {{ partial "menu.html" }}
-  <div class="container-fluid">
-    <!-- Logo -->
-    <div class="col-xs-12 col-md-6">
+{{ partial "menu.html" . }}
+<div class="page-wrapper">
+  <header>
+    <!-- <a class="site-link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> -->
+    <h1>{{ .Title }}</h1>
+  </header>
 
+<!--
+  <nav class="page-toc">
+    <ul>
+      <li><a href="#aktuelles">Aktuelles</a></li>
+      <li><a href="#unterkuefte-und-bedarfslisten">Unterkünfte und Bedarfslisten</a></li>
+      <li><a href="#spenden">Spenden</a></li>
+      <li><a href="#willkommen-im-kiez">Willkommen im Kiez</a></li>
+      <li><a href="#direkt-hilfe">Direkte Hilfe</a></li>
+      <li><a href="#verein-friedrichshain-hilft-ev">Verein Friedrichshain hilft e.V.</a></li>
+      <li><a href="#hilfreiche-links">Hilfreiche LINKS</a></li>
+      <li><a href="#helfen-in-einem-anderen-kiez">Helfen in einem anderen Kiez</a></li>
+    </ul>
+  </nav>
+-->
+
+
+  <nav class="page-toc">
+    <ul>
+      <li><a href="#was">Was?</a></li>
+      <li><a href="#wie">Wie?</a></li>
+      <li><a href="#wann">Wann?</a></li>
+      <li><a href="#warum">warum?</a></li>
+      <li><a href="#wer">Wer?</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-content">
+    <section id="was">
       <header>
-        <h1 class="title">FRIEDRICHSHAIN</h1>
-        <h2 class="subtitle">HILFT</h2>
-        <div id="logo"></div>
+        <h1>Was?</h1>
       </header>
-      <!-- /Logo -->
-
-      <!-- Text -->
-      <div id="welcome-text">
-        <h1 class="inverse"><a href="https://twitter.com/fhainhilft" class="nolink">#FHAINHILFT</a></h1>
-        <p class="text-content">
-          <strong>Willkommen,</strong> auf dieser Seite entsteht momentan die Internet-Präsenz der Initiative "Friedrichshain Hilft" mit aktuellen Informationen zur Hilfe für Geflüchtete.
-        </p>
-          Sie möchten sich einbringen oder haben Fragen? Melden Sie sich bei uns unter:
-          <a class="inverse" href="mailto:kontakt@friedrichshain-hilft.de">kontakt@friedrichshain-hilft.de</a>
-        <p>
-
-        </p>
+      <div class="content">
+        Friedrichshain Hilft ist eine gruppe von Menschen die andere Menschen wollen.
       </div>
-    </div>
+    </section>
 
-    <aside class="col-xs-12 col-md-6" style="text-align: center;">
-      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/fhainhilft" data-widget-id="646734272439668736">Tweets by @fhainhilft</a>
-    </aside>
-  <!-- /Text -->
+    <section id="wie">
+      <header>
+        <h1>Wie?</h1>
+      </header>
+      <div class="content">
+        Durch pünktliche und direkte und regelmässige Aktionen die nach kulturelle und menschliche Austauch führen.
+      </div>
+    </section>
 
-    <!-- Imprint -->
-    <!-- Impressum wahrscheinlich noch nicht nötig -->
-    <!-- /Imprint -->
+    <section id="warum">
+      <header>
+        <h1>Warum?</h1>
+      </header>
+      <div class="content">
+        Weil wir etwas für Menschen etwas tun können und den Angst vor dem Unbekannten löschen wollen.
+      </div>
+    </section>
 
-
-      <div class="col-xs-12" style="margin-top: 3em">
+    <section id="wann">
+      <header>
+        <h1>Wann?</h1>
+      </header>
+      <div class="content">
         <iframe src="https://www.google.com/calendar/embed?src=l3b5ifeu9bt0egr5nqehkp98fg%40group.calendar.google.com&ctz=Europe/Berlin" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
-    </div>
-    <footer></footer>
-    <script type="text/javascript" src="js/scripts.js"></script>
-  </body>
-</html>
+    </section>
+
+    <section id="wer">
+      <header>
+        <h1>Wer?</h1>
+      </header>
+      <div class="content">
+
+      </div>
+    </section>
+
+    <!-- <section id="aktuelles">
+      <header>
+        <h1>Aktuelles</h1>
+      </header>
+      <div class="content">
+        Dort informieren wir zu allem was es gerade neues zum Thema Flüchtlinge im Kiez gibt.
+        {{ partial "tweets.html" . }}
+      </div>
+    </section>
+
+
+    <section id="unterkuefte-und-bedarfslisten">
+      <header>
+        <h1>Unterkünfte und Bedarfslisten</h1>
+      </header>
+      <div class="content">
+        Hier listen wir die NUK im Kiez mit aktualisierten Bedarfslisten auf.
+      </div>
+    </section>
+
+
+    <section id="spenden">
+      <header>
+        <h1>Spenden</h1>
+      </header>
+      <div class="content">
+        Adresse und Öffnungszeiten unseres Spendenlagers (Evtl. mit Bedarfsliste) + Spendenkonto, sobald wir eins haben.
+      </div>
+    </section>
+
+
+    <section id="willkommen-im-kiez">
+      <header>
+        <h1>Willkommen im Kiez</h1>
+      </header>
+      <div class="content">
+        Hier wird es einen Kalender geben auf dem man sehen kann was gerade im Kiez angeboten wird.
+      </div>
+    </section>
+
+
+    <section id="direkt-hilfe">
+      <header>
+        <h1>Direkte Hilfe</h1>
+      </header>
+      <div class="content">
+        Ein Erklärungstext was das bedeutet und eine Auflistung wie man sich einbringen kann. Sobald wir den Volunteerplaner laufen haben, wird dort eine Verlinkung dazu sein.
+      </div>
+    </section>
+
+
+    <section id="verein-friedrichshain-hilft-ev">
+      <header>
+        <h1>Verein Friedrichshain hilft e.V.</h1>
+      </header>
+      <div class="content">
+        Erklärungstext was der Verein macht und Spendenkonto
+      </div>
+    </section>
+
+
+    <section id="hilfreiche-links">
+      <header>
+        <h1>Hilfreiche LINKS</h1>
+      </header>
+      <div class="content">
+        Dominique aus dem Orga-Team hat sich bereit erklärt alle Initiativen, Organisationen, Apps und Webseiten zu recherchieren, die sich mit dem Thema Refugees beschäftigen und Angebote dazu haben bzw. die Orga rund um alle Themen leichter machen.<br/>
+        Sobald wir das haben, werden wir das kategorisieren und dort auf die Webseite packen.
+      </div>
+    </section>
+
+
+    <section id="helfen-in-einem-anderen-kiez">
+      <header>
+        <h1>Helfen in einem anderen Kiez</h1>
+      </header>
+      <div class="content">
+        Hier werden Links zu den anderen „XYZ hilft“ Initiativen sein.
+      </div>
+    </section> -->
+  </div>
+
+<!-- <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/fhainhilft" data-widget-id="646734272439668736">Tweets by @fhainhilft</a> -->
+<!-- <iframe src="https://www.google.com/calendar/embed?src=l3b5ifeu9bt0egr5nqehkp98fg%40group.calendar.google.com&ctz=Europe/Berlin" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe> -->
+
+
+{{ partial "footer.html" . }}

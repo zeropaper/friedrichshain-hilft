@@ -1,9 +1,43 @@
+<!-- <ul class="sidebar-menu">
+  {{ $currentNode := . }}
+  {{ $langcode := "" }}
+  {{ if isset .Params "languagecode" }}
+    {{ $langcode := .Params.languagecode }}
+  {{ else }}
+    {{ $langcode := .Site.LanguageCode }}
+  {{ end }}
 
-  <div class="site-menu">
-    <a></a>
-    <ul>
-      <li><a href="direkt-hilfe/">Direkt Hilfe</a></li>
-      <li><a href="kontakt/">Kontakt</a></li>
-      <li><a href="contact/">Contact</a></li>
-    </ul>
-  </div>
+  <strong>language
+  {{ $langcode }}
+  {{ if isset .Params "languagecode" }}
+    {{ .Params.languagecode }}
+  {{ else }}
+    {{ .Site.LanguageCode }}
+  {{ end }}
+  </strong>
+
+  {{ range .Site.Menus.de }}
+    {{ if .HasChildren }}
+      <li class="sub-menu{{if $currentNode.HasMenuCurrent "de" . }} active{{end}}">
+        <a href="javascript:;" class="">
+          {{ .Pre }}
+          <span>{{ .Name }}</span>
+          <span class="menu-arrow arrow_carrot-right"></span>
+        </a>
+        <ul class="sub">
+          {{ range .Children }}
+          <li{{if $currentNode.IsMenuCurrent "de" . }} class="active"{{end}}>
+            <a href="{{.URL}}"> {{ .Name }} </a>
+          </li>
+          {{ end }}
+        </ul>
+    {{else}}
+      <li>
+        <a href="{{.URL}}">
+          {{ .Pre }}
+          <span>{{ .Name }}</span>
+        </a>
+    {{end}}
+  </li>
+  {{end}}
+</ul> -->

@@ -18,19 +18,19 @@ module.exports = function (grunt) {
           dest: '<%= setup.target %>/'
         }]
       },
-      // bootstrapFonts: {
-      //   files: [{
-      //     cwd: 'node_modules/camunda-commons-ui/node_modules/bootstrap/fonts/',
-      //     expand: true,
-      //     src: ['<%= setup.source %>/**/*'],
-      //     dest: '<%= setup.target %>/static/fonts/'
-      //   }]
-      // },
+      bootstrapFonts: {
+        files: [{
+          cwd: 'node_modules/camunda-commons-ui/node_modules/bootstrap/fonts/',
+          expand: true,
+          src: ['**/*'],
+          dest: '<%= setup.target %>/static/fonts/'
+        }]
+      },
       layouts: {
         files: [{
           cwd: '<%= setup.source %>/layouts/',
           expand: true,
-          src: ['<%= setup.source %>/**/*'],
+          src: ['**/*'],
           dest: '<%= setup.target %>/layouts/'
         }]
       },
@@ -38,7 +38,7 @@ module.exports = function (grunt) {
         files: [{
           cwd: '<%= setup.source %>/img/',
           expand: true,
-          src: ['<%= setup.source %>/**/*'],
+          src: ['**/*'],
           dest: '<%= setup.target %>/static/img/'
         }]
       }

@@ -1,96 +1,23 @@
-html, body {
-  font-family: 'Muli', sans-serif;
-  font-size: 1.25em;
-  padding: 0.5em;
+@import "_variables";
+@import "_bootstrap";
+
+nav.page-toc {
+  min-height: 100vh;
 }
 
-a {
-  color: inherit;
-  white-space: nowrap;
-}
-a:hover, a:visited, a:active {
-  color: inherit;
-  -moz-text-decoration-color: inherit; /* Code for Firefox */
-    text-decoration-color: inherit;
-}
-a.inverse {
-  color: #fff;
-  background-color: #EF2D33;
-  padding-left: 0.25em;
-  padding-right: 0.25em;
-}
-a.inverse:hover, a.inverse:visited, a.inverse:active {
-  color: #fff;
-  -moz-text-decoration-color: #fff; /* Code for Firefox */
-    text-decoration-color: #fff;
-}
+.page-content {
+  .container-fluid;
 
-p {
-  margin-bottom: 1em;
-}
+  > section {
+    min-height: 100vh;
+    > header {
+      > h1 {
 
-h1 {
-  color: #ef2d33;
-  font-size: 2em;
-  letter-spacing: 0.05em;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-h1.title {
-  text-align: right;
-}
-h1.inverse {
-  color: #fff;
-  background-color: #EF2D33;
-  padding-left: 0.25em;
-  padding-right: 0.25em;
-}
+      }
+    }
 
-h2 {
-  color: #5dcadd;
-  font-size: 4em;
-  letter-spacing: 0.05em;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-h2.subtitle {
-  text-align: right;
-}
+    > .content {
 
-#logo {
-  min-height: 368px;
-  background: url('../img/logo_big_without_text.png') center no-repeat;
-  background-size: contain;
-  margin-bottom: 0.5em;
-  margin-top: -120px;
-}
-
-p.text-content {
-  padding-top: 0.5em;
-}
-
-.border-top {
-  border-top: 1px solid #EF2D33;
-}
-
-@media(max-width:767px) {
-  html, body {
-    font-size: 1em;
-  }
-}
-
-@media(min-width:767px) {
-  html, body {
-    font-size: 1em;
-  }
-}
-
-@media(min-width:1440px) {
-  html, body {
-    font-size: 1.25em;
-  }
-
-  #logo {
-    height: 368px;
+    }
   }
 }
