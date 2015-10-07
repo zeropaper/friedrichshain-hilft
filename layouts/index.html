@@ -20,172 +20,151 @@
   {{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
 
   <meta name="generator" content="Hugo 0.13" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
   <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css" />
 </head>
-<body>
+<body class="home">
 {{ partial "menu.html" . }}
 <div class="page-wrapper">
   <header>
+    <div class="logo"></div>
     <!-- <a class="site-link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> -->
     <h1>{{ .Title }}</h1>
+
+    {{ partial "quick-links.html" . }}
   </header>
 
-<!--
   <nav class="page-toc">
     <ul>
-      <li><a href="#aktuelles">Aktuelles</a></li>
-      <li><a href="#unterkuefte-und-bedarfslisten">Unterkünfte und Bedarfslisten</a></li>
       <li><a href="#spenden">Spenden</a></li>
-      <li><a href="#willkommen-im-kiez">Willkommen im Kiez</a></li>
-      <li><a href="#direkt-hilfe">Direkte Hilfe</a></li>
-      <li><a href="#verein-friedrichshain-hilft-ev">Verein Friedrichshain hilft e.V.</a></li>
-      <li><a href="#hilfreiche-links">Hilfreiche LINKS</a></li>
-      <li><a href="#helfen-in-einem-anderen-kiez">Helfen in einem anderen Kiez</a></li>
-    </ul>
-  </nav>
--->
-
-
-  <nav class="page-toc">
-    <ul>
-      <li><a href="#was">Was?</a></li>
-      <li><a href="#wie">Wie?</a></li>
-      <li><a href="#wann">Wann?</a></li>
-      <li><a href="#warum">warum?</a></li>
-      <li><a href="#wer">Wer?</a></li>
+      <li><a href="#willkommen">Willkommen im Kiez</a></li>
+      <li><a href="#aktionen">Aktionen</a></li>
+      <li><a href="#helfen-im-kiez">Im Kiez</a></li>
+      <li><a href="#tweets">Twitter feed</a></li>
     </ul>
   </nav>
 
   <div class="page-content">
-    <section id="was">
-      <header>
-        <h1>Was?</h1>
-      </header>
-      <div class="content">
-        Friedrichshain Hilft ist eine gruppe von Menschen die andere Menschen wollen.
-      </div>
-    </section>
-
-    <section id="wie">
-      <header>
-        <h1>Wie?</h1>
-      </header>
-      <div class="content">
-        Durch pünktliche und direkte und regelmässige Aktionen die nach kulturelle und menschliche Austauch führen.
-      </div>
-    </section>
-
-    <section id="warum">
-      <header>
-        <h1>Warum?</h1>
-      </header>
-      <div class="content">
-        Weil wir etwas für Menschen etwas tun können und den Angst vor dem Unbekannten löschen wollen.
-      </div>
-    </section>
-
-    <section id="wann">
-      <header>
-        <h1>Wann?</h1>
-      </header>
-      <div class="content">
-        <iframe src="https://www.google.com/calendar/embed?src=l3b5ifeu9bt0egr5nqehkp98fg%40group.calendar.google.com&ctz=Europe/Berlin" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </section>
-
-    <section id="wer">
-      <header>
-        <h1>Wer?</h1>
-      </header>
-      <div class="content">
-
-      </div>
-    </section>
-
-    <!-- <section id="aktuelles">
-      <header>
-        <h1>Aktuelles</h1>
-      </header>
-      <div class="content">
-        Dort informieren wir zu allem was es gerade neues zum Thema Flüchtlinge im Kiez gibt.
-        {{ partial "tweets.html" . }}
-      </div>
-    </section>
-
-
-    <section id="unterkuefte-und-bedarfslisten">
-      <header>
-        <h1>Unterkünfte und Bedarfslisten</h1>
-      </header>
-      <div class="content">
-        Hier listen wir die NUK im Kiez mit aktualisierten Bedarfslisten auf.
-      </div>
-    </section>
-
-
     <section id="spenden">
       <header>
         <h1>Spenden</h1>
       </header>
       <div class="content">
-        Adresse und Öffnungszeiten unseres Spendenlagers (Evtl. mit Bedarfsliste) + Spendenkonto, sobald wir eins haben.
+        <p>
+          Momentan ist unsere Kleiderkammer voll.
+          Das ist toll und wir freuen uns über die überwältigende Hilfsbereitschaft der Friedrichshainer.
+          Neue Spenden können wir vorerst nicht mehr annehmen.
+        </p>
+        <p>
+          Daher öffnen wir unserer Kleiderkammer für Flüchtlinge und andere Bedürftige,
+          in der <strong>Rigaer Straße 78, 10247 Berlin-Friedrichshain</strong>, zu folgenden Zeiten:
+        </p>
+        <ul>
+          <li>
+            Dienstag 10-14 Uhr
+          </li>
+          <li>
+            Mittwoch 16-20 Uhr
+          </li>
+          <li>
+            Donnerstag 10-14 Uhr
+          </li>
+        </ul>
+        <p>
+          Sobald wir wieder Platz haben, benachrichtigen wir Dich hier wann Du Kleiderspenden abgeben kannst.
+          In der Zwischenzeit kannst Du Dich hier(LINK ZU Helfen in einem anderen Kiez) über die Bedarfslisten anderer Berliner Initiativen informieren.
+        </p>
+        <p>
+          <strong>Folgende Dinge werden immer benötigt</strong>
+        </p>
+        <ul>
+          <li>Fahrkarten BVG (2 Stunden Tickets AB)</li>
+          <li>Hygieneartikel (bitte nur verschlossen)</li>
+          <li>Guthabenkarten für lebara, eplus und lycamobile (keine SIM Karten mehr, DANKE! :)</li>
+          <li>Smartphones mit Ladekabel</li>
+          <li>Gutscheine DM, Rossmann, etc.</li>
+          <li>Bekleidungsgutscheine (Leichter zu lagern als Bekleidung, unser Lager ist sehr klein).</li>
+        </ul>
       </div>
     </section>
 
-
-    <section id="willkommen-im-kiez">
+    <section id="willkommen">
       <header>
         <h1>Willkommen im Kiez</h1>
       </header>
       <div class="content">
-        Hier wird es einen Kalender geben auf dem man sehen kann was gerade im Kiez angeboten wird.
+        <p>
+          Auch über die Soforthilfe hinaus wollen wir Menschen in Friedrichshain willkommen heißen und dazu beitragen, dass sie hier gut "ankommen", sich schnell im Kiez zurechtfinden, persönliche Kontakte knüpfen und Perspektiven entwickeln können.<br/>
+          Nicht nur als HelferInnen sondern auch als NachbarInnen wollen wir den hier eintreffenden und auch den schon jetzt hier lebenden geflüchteten Menschen begegnen. Auf Augenhöhe und im Gespräch mit den geflüchteten Menschen, ausgehend von ihren Bedürfnissen und Ideen, wollen wir Begegnungen außerhalb des "Unterkunftsalltags" schaffen. Wenn Du Dich einbringen möchtest und eine Veranstaltung oder ein Projekt wie z.B Sport machen, musizieren, KIEZspaziergänge, gemeinsame Aktivitäten im Alltag, Deutschkurse usw.  in Friedrichshain starten möchtest, dann schreib uns doch bitte eine Mail an <a href="">helfen@friedrichshain-hilft.de</a>
+        <!-- FOTOS VON FRIEDRICHSHAIN --></p>
       </div>
     </section>
 
-
-    <section id="direkt-hilfe">
+    <section id="aktionen">
       <header>
-        <h1>Direkte Hilfe</h1>
+        <h1>Aktionen</h1>
       </header>
       <div class="content">
-        Ein Erklärungstext was das bedeutet und eine Auflistung wie man sich einbringen kann. Sobald wir den Volunteerplaner laufen haben, wird dort eine Verlinkung dazu sein.
+        Hier findest Du alle Aktionen im Überblick:
+        <iframe src="https://www.google.com/calendar/embed?src=l3b5ifeu9bt0egr5nqehkp98fg%40group.calendar.google.com&ctz=Europe/Berlin" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
     </section>
 
-
-    <section id="verein-friedrichshain-hilft-ev">
+    <section id="verein">
       <header>
         <h1>Verein Friedrichshain hilft e.V.</h1>
       </header>
       <div class="content">
-        Erklärungstext was der Verein macht und Spendenkonto
+        <p>
+          Wir sind gerade dabei einen gemeinnützigen Verein zu gründen. Weitere Infos folgen.<br/>
+          Wenn Du Dich in diesem Verein engagieren möchtest, dann schreib bitte an <a href="mailto:kontakt@friedrichshain-hilft.de">kontakt@friedrichshain-hilft.de</a>.
+        </p>
       </div>
     </section>
 
 
-    <section id="hilfreiche-links">
-      <header>
-        <h1>Hilfreiche LINKS</h1>
-      </header>
-      <div class="content">
-        Dominique aus dem Orga-Team hat sich bereit erklärt alle Initiativen, Organisationen, Apps und Webseiten zu recherchieren, die sich mit dem Thema Refugees beschäftigen und Angebote dazu haben bzw. die Orga rund um alle Themen leichter machen.<br/>
-        Sobald wir das haben, werden wir das kategorisieren und dort auf die Webseite packen.
-      </div>
-    </section>
-
-
-    <section id="helfen-in-einem-anderen-kiez">
+    <section id="helfen-im-kiez">
       <header>
         <h1>Helfen in einem anderen Kiez</h1>
       </header>
       <div class="content">
-        Hier werden Links zu den anderen „XYZ hilft“ Initiativen sein.
+        <p>
+        Hier sind noch andere Berliner Initiativen, die sich für Flüchtlinge einsetzen.
+        </p>
+        <ul>
+          <li><a href="https://docs.google.com/spreadsheets/d/1HdzF4j01lrif-XtmQLTwznnQrAlfoBc-JxccyP7NAmU/pubhtml?gid=672621891&single=true">Moabit hilft (Bedarfsliste LaGeSo)</a></li>
+          <li><a href="http://www.eaurich.de/Welcome/index.html">Allende Viertel</a></li>
+          <li><a href="http://www.berliner-stadtmission.de/wie-sie-helfen/mitmachen/sachspende">Berliner Stadtmission</a></li>
+          <li><a href="http://www.charlottenburg-hilft.de/?page_id=6">Charlottenburg hilft</a></li>
+          <li><a href="http://www.lichtenberg-hilft.de/index.php?id=2">Karlshorst hilft</a></li>
+          <li><a href="http://kreuzberg-hilft.com/bedarfsliste/">Kreuzberg hilft</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/1IPzRSzWPeuJdgGYRCW4KF9CDmWuGsd5s90IqBK6oyeY/edit#gid=0">Olympiapark</a></li>
+          <li><a href="http://www.pankow-hilft.de/">Pankow hilft</a></li>
+          <li><a href="https://docs.google.com/document/d/17Hyj3w-rEBpSrtKjezrldJnVvKlg34lDXMs6W5WSLms/pub">Schöneberg hilft</a></li>
+          <li><a href="https://docs.google.com/document/d/1qS7GbM1APqXvTGGxi7ZOqOX-BjHxCrT-oDQv4CSqz8M/pub">Spandau hilft</a></li>
+          <li><a href="http://www.wedding-hilft.de/">Wedding hilft</a></li>
+          <li><a href="https://www.wilhelmstadt-hilft.org/kleiderkammer/bedarfsliste/">Wilhelmsstadt hilft</a></li>
+          <li><a href="https://www.facebook.com/Fl%C3%BCchtlinge-willkommen-in-Buch-und-Karow-1481160482158156/timeline/">Willkommen in Buch und Karow</a></li>
+          <li><a href="https://willkommeninmarzahn.wordpress.com/category/allgemein/">Willkommen in Marzahn</a></li>
+          <li><a href="http://www.wir-netzwerk.de/index.php/unterstuetzung/spenden">Willkommen in Reinickendorf</a></li>
+          <li><a href="http://www.wir-netzwerk.de/index.php/unterstuetzung/spenden">Willkommen in Steglitz-Zehlendorf</a></li>
+          <li><a href="http://willkommen-im-westend.de/?page_id=348">Willkommen im Westend</a></li>
+          <li><a href="https://docs.google.com/document/d/1OE8ihCHwcJqMy6fTSw_xR-nax7ZFz-PCNemGhpZCdHw/pub">Wilmersdorf hilft</a></li>
+        </ul>
       </div>
-    </section> -->
+    </section>
+
+
+    <section id="tweets">
+      <header>
+        <h1>Twitter feed</h1>
+      </header>
+      <div class="content">
+        {{ partial "tweets" . }}
+      </div>
+    </section>
   </div>
 
-<!-- <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/fhainhilft" data-widget-id="646734272439668736">Tweets by @fhainhilft</a> -->
-<!-- <iframe src="https://www.google.com/calendar/embed?src=l3b5ifeu9bt0egr5nqehkp98fg%40group.calendar.google.com&ctz=Europe/Berlin" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe> -->
 
 
 {{ partial "footer.html" . }}

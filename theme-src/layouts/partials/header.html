@@ -20,6 +20,7 @@
   {{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
 
   <meta name="generator" content="Hugo 0.13" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
   <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css" />
 </head>
 <body>
@@ -28,4 +29,6 @@
   <header>
     <a class="site-link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     <h1>{{ .Title }}</h1>
+
+    {{ partial "quick-links.html" . }}
   </header>

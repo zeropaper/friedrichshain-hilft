@@ -26,6 +26,14 @@ module.exports = function (grunt) {
           dest: '<%= setup.target %>/static/fonts/'
         }]
       },
+      themeFonts: {
+        files: [{
+          cwd: '<%= setup.source %>/static/fonts/',
+          expand: true,
+          src: ['**/*'],
+          dest: '<%= setup.target %>/static/fonts/'
+        }]
+      },
       layouts: {
         files: [{
           cwd: '<%= setup.source %>/layouts/',
