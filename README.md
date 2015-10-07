@@ -26,4 +26,4 @@ npm run-script deploy
 
 ## License
 
-[Apache 2.0](LICENSE)
+[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
