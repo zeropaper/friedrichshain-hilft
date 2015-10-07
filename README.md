@@ -2,16 +2,17 @@
 
 This project is aimed to generate a static website with (Hugo)[http://gohugo.io] as well as providing tools to customize its theme.
 
-Initially created for (http://friedrichshain-hilft.de)[http://friedrichshain-hilft.de].
+Initially created for [http://friedrichshain-hilft.de](http://friedrichshain-hilft.de).
 
 ## Development
 
 ### Setup
 
-You will need [hugo](http://gohugo.io) and [node.js](http://nodejs.com) to start.
+You will need [Hugo](http://gohugo.io) and [node.js](http://nodejs.com) to start.
 Then...
 
 ```sh
+npm i -g grunt-cli # if you do not have grunt already
 npm i
 grunt
 ```
