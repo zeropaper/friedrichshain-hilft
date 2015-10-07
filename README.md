@@ -1,4 +1,8 @@
-# Friedrichshain hilft Hugo theme
+# Friedrichshain hilft
+
+This project is aimed to generate a static website with (Hugo)[http://gohugo.io] as well as providing tools to customize its theme.
+
+Initially created for (http://friedrichshain-hilft.de)[http://friedrichshain-hilft.de].
 
 ## Development
 
@@ -15,10 +19,14 @@ grunt
 ### Deployment
 
 Need the setup above and then:
+(does not apply for Friedrichshain hilft ;) )
 
 ```sh
 npm run-script deploy
 ```
+
+
+
 
 ## Author
 
