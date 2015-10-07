@@ -1,6 +1,6 @@
 # Friedrichshain hilft
 
-This project is aimed to generate a static website with (Hugo)[http://gohugo.io] as well as providing tools to customize its theme.
+This project is aimed to generate a static website with [Hugo](http://gohugo.io) as well as providing tools to customize its theme.
 
 Initially created for [http://friedrichshain-hilft.de](http://friedrichshain-hilft.de).
 
