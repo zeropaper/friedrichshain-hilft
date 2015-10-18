@@ -1,37 +1,17 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ if isset .Params "languagecode" }}{{ .Params.languagecode }}{{ else }}{{ .Site.LanguageCode }}{{ end }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-  <meta name="viewport" content="width=device-width" />
-
-<!--
- <base href="{{ .Site.BaseURL }}">
--->
-
-  <title>{{ .Title }} | Friedrichshain hilft</title>
-  <meta name="description" content="Die Initiative 'Friedrichshain Hilft' hilft Geflüchteten im Berliner Bezirk Friedrichshain">
-  <meta name="keywords" content="Rufgees,Welcome,Flüchtlinge,Geflüchtete,Hilfe,Friedrichshain,Berlin">
-
-  <link rel="canonical" href="{{ .Permalink }}">
-
-  {{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
-
-  <meta name="generator" content="Hugo 0.13" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-  <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css" />
+  {{ partial "html-head-meta" . }}
 </head>
 <body class="home">
 {{ partial "menu.html" . }}
 <div class="page-wrapper">
   <header>
-    <div class="logo"></div>
-    <!-- <a class="site-link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> -->
-    <h1>{{ .Title }}</h1>
-
-    {{ partial "quick-links.html" . }}
+    <div class="col-xs-3 logo"></div>
+    <h1 class="col-xs-9 col-sm-6">{{ .Title }}</h1>
+    <div class="hidden-xs col-sm-3">
+      {{ partial "quick-links.html" . }}
+    </div>
   </header>
 
   <nav class="page-toc">
@@ -39,7 +19,7 @@
       <li><a href="#spenden">Spenden</a></li>
       <li><a href="#willkommen">Willkommen im Kiez</a></li>
       <li><a href="#aktionen">Aktionen</a></li>
-      <li><a href="#helfen-im-kiez">Im Kiez</a></li>
+      <li><a href="#helfen-im-andere-kiez">Helfen in einem anderen Kiez</a></li>
       <li><a href="#tweets">Twitter feed</a></li>
     </ul>
   </nav>
@@ -72,7 +52,7 @@
         </ul>
         <p>
           Sobald wir wieder Platz haben, benachrichtigen wir Dich hier wann Du Kleiderspenden abgeben kannst.
-          In der Zwischenzeit kannst Du Dich hier(LINK ZU Helfen in einem anderen Kiez) über die Bedarfslisten anderer Berliner Initiativen informieren.
+          In der Zwischenzeit kannst Du <a href="#helfen-im-andere-kiez">Dich hier</a> über die Bedarfslisten anderer Berliner Initiativen informieren.
         </p>
         <p>
           <strong>Folgende Dinge werden immer benötigt</strong>
@@ -94,8 +74,11 @@
       </header>
       <div class="content">
         <p>
-          Auch über die Soforthilfe hinaus wollen wir Menschen in Friedrichshain willkommen heißen und dazu beitragen, dass sie hier gut "ankommen", sich schnell im Kiez zurechtfinden, persönliche Kontakte knüpfen und Perspektiven entwickeln können.<br/>
-          Nicht nur als HelferInnen sondern auch als NachbarInnen wollen wir den hier eintreffenden und auch den schon jetzt hier lebenden geflüchteten Menschen begegnen. Auf Augenhöhe und im Gespräch mit den geflüchteten Menschen, ausgehend von ihren Bedürfnissen und Ideen, wollen wir Begegnungen außerhalb des "Unterkunftsalltags" schaffen. Wenn Du Dich einbringen möchtest und eine Veranstaltung oder ein Projekt wie z.B Sport machen, musizieren, KIEZspaziergänge, gemeinsame Aktivitäten im Alltag, Deutschkurse usw.  in Friedrichshain starten möchtest, dann schreib uns doch bitte eine Mail an <a href="">helfen@friedrichshain-hilft.de</a>
+          Auch über die Soforthilfe hinaus wollen wir Menschen in Friedrichshain willkommen heißen und dazu beitragen, dass sie hier gut "ankommen", sich schnell im Kiez zurechtfinden, persönliche Kontakte knüpfen und Perspektiven entwickeln können.
+        </p>
+        <p>
+          Nicht nur als HelferInnen sondern auch als NachbarInnen wollen wir den hier eintreffenden und auch den schon jetzt hier lebenden geflüchteten Menschen begegnen.<br/>
+          Auf Augenhöhe und im Gespräch mit den geflüchteten Menschen, ausgehend von ihren Bedürfnissen und Ideen, wollen wir Begegnungen außerhalb des "Unterkunftsalltags" schaffen. Wenn Du Dich einbringen möchtest und eine Veranstaltung oder ein Projekt wie z.B Sport machen, musizieren, KIEZspaziergänge, gemeinsame Aktivitäten im Alltag, Deutschkurse usw.  in Friedrichshain starten möchtest, dann schreib uns doch bitte eine Mail an <a href="mailto:helfen@friedrichshain-hilft.de">helfen@friedrichshain-hilft.de</a>
         <!-- FOTOS VON FRIEDRICHSHAIN --></p>
       </div>
     </section>
@@ -106,7 +89,10 @@
       </header>
       <div class="content">
         Hier findest Du alle Aktionen im Überblick:
-        <iframe src="https://www.google.com/calendar/embed?src=l3b5ifeu9bt0egr5nqehkp98fg%40group.calendar.google.com&ctz=Europe/Berlin" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;height=400&amp;wkst=2&amp;hl=de&amp;bgcolor=%23FFFFFF&amp;src=l3b5ifeu9bt0egr5nqehkp98fg%40group.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FBerlin" style=" border-width:0 " width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+        <!--
+        {{ partial "google-calendar" . }}
+        -->
       </div>
     </section>
 
@@ -123,7 +109,7 @@
     </section>
 
 
-    <section id="helfen-im-kiez">
+    <section id="helfen-im-andere-kiez">
       <header>
         <h1>Helfen in einem anderen Kiez</h1>
       </header>

@@ -1,27 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ if isset .Params "languagecode" }}{{ .Params.languagecode }}{{ else }}{{ .Site.LanguageCode }}{{ end }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-  <meta name="viewport" content="width=device-width" />
-
-<!--
- <base href="{{ .Site.BaseURL }}">
--->
-
-  <title>{{ .Title }} | Friedrichshain hilft</title>
-  <meta name="description" content="Die Initiative 'Friedrichshain Hilft' hilft Geflüchteten im Berliner Bezirk Friedrichshain">
-  <meta name="keywords" content="Rufgees,Welcome,Flüchtlinge,Geflüchtete,Hilfe,Friedrichshain,Berlin">
-
-  <link rel="canonical" href="{{ .Permalink }}">
-
-  {{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
-
-  <meta name="generator" content="Hugo 0.13" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-  <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css" />
+  {{ partial "html-head-meta" . }}
 </head>
 <body>
 {{ partial "menu.html" . }}
@@ -29,6 +9,7 @@
   <header>
     <a class="site-link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     <h1>{{ .Title }}</h1>
-
-    {{ partial "quick-links.html" . }}
+    <div class="hidden-xs">
+      {{ partial "quick-links.html" . }}
+    </div>
   </header>
