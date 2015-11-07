@@ -107,7 +107,7 @@ body {
     h1 {
       color: @navbar-default-color;
       margin: 0;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       padding: 0 @grid-half-gutter;
       margin-top: 20px;
     }
@@ -132,7 +132,7 @@ body {
   }
 }
 
-nav.page-toc {
+nav.site-menu {
   width: 25%;
   padding: @grid-gutter-width + 10px @grid-half-gutter 0 @grid-half-gutter;
   position: fixed;
@@ -153,11 +153,17 @@ nav.page-toc {
     display: block;
     padding: 0.2rem;
     margin-bottom: 0.2rem;
-    border-bottom: 1px dashed @gray-light;
+    border-bottom: 1px solid @gray-lighter;
+    font-size: 18px;
     &:last-of-type {
       border-bottom: none;
       margin-bottom: none;
     }
+  }
+
+  .on-home {
+    font-size: 16px;
+    font-style: italic;
   }
 }
 
@@ -166,11 +172,24 @@ nav.page-toc {
   margin-left: 25%;
 
   > section {
+    min-height: 50vh;
+    position: relative;
+    margin-right: -15px;
+    padding: @navbar-height  @grid-gutter-width @navbar-height 0;
+
     > header,
     > .content {
       padding: 0 @grid-half-gutter;
     }
-
+    > .content {
+      max-width: 550px;
+      h1, .h1 { font-size: @font-size-h1 * 0.8; }
+      h2, .h2 { font-size: @font-size-h2 * 0.8; }
+      h3, .h3 { font-size: @font-size-h3 * 0.8; }
+      h4, .h4 { font-size: @font-size-h4 * 0.8; }
+      h5, .h5 { font-size: @font-size-h5 * 0.8; }
+      h6, .h6 { font-size: @font-size-h6 * 0.8; }
+    }
   }
 }
 
@@ -230,12 +249,6 @@ body.home {
     z-index: 1;
 
     > section {
-      min-height: 50vh;
-      // font-size: 1.2rem;
-      position: relative;
-      margin-right: -15px;
-      padding: @navbar-height  @grid-gutter-width @navbar-height 0;
-
       > header,
       > .content {
         position: relative;
@@ -244,7 +257,7 @@ body.home {
 
       .skewd-bg();
 
-      &:nth-child(odd) {
+      &:nth-child(even) {
         background-color: @body-alt-bg;
 
         &:after {
@@ -281,7 +294,7 @@ body.home {
     }
   }
 
-  .page-toc {
+  .site-menu {
     display: none;
   }
 
@@ -297,4 +310,10 @@ body.home {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+
+.section-description > ul {
+  margin-top: 2em;
+  font-size: 110%;
 }

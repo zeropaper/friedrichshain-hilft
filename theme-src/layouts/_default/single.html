@@ -1,7 +1,12 @@
 {{ partial "header.html" . }}
-
-  <nav class="page-toc">{{ .TableOfContents }}</nav>
-
-  <div class="page-content">{{ .Content }}</div>
-
+<div class="page-content">
+  <section>
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </section>
+</div>
 {{ partial "footer.html" . }}

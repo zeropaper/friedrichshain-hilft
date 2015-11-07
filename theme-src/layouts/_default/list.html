@@ -1,5 +1,18 @@
 {{ partial "header.html" . }}
+<div class="page-content">
+  <section class="section-description">
+    <header>
+      <h1>Digitale Helfer</h1>
+    </header>
+    <div class="content">
+      Es ist nicht einfach, in der momentanen Situation den Überblick zu behalten. Doch zum Glück hat unser Zeitalter dann doch das ein oder andere zu bieten: Um sowohl die Arbeit der freiwilligen Helfer, als auch die Asylsuchenden in der neuen, ungewohnten Umgebung zu unterstützen, wurden mittlerweile eine Vielzahl „digitale Helfer“ entwickelt. Da auch hier nicht immer klar ist, welche der Apps und Websites wirklich sinnvoll sind, bieten wir im Folgenden eine Auswahl an den von uns genutzten und als hilfreich befundenen Helfer an.
+    </div>
 
-  <div class="page-content"></div>
-
+    <ul>
+    {{ range .Data.Pages }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+    </ul>
+  </section>
+</div>
 {{ partial "footer.html" . }}

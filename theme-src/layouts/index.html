@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js" lang="{{ if isset .Params "languagecode" }}{{ .Params.languagecode }}{{ else }}{{ .Site.LanguageCode }}{{ end }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-<head>
-  {{ partial "html-head-meta" . }}
-</head>
-<body class="home">
-{{ partial "menu.html" . }}
-<div class="page-wrapper">
-  <header>
-    <div class="col-xs-3 logo"></div>
-    <h1 class="col-xs-9 col-sm-6">{{ .Title }}</h1>
-    <div class="hidden-xs col-sm-3">
-      {{ partial "quick-links.html" . }}
-    </div>
-  </header>
-
-  <nav class="page-toc">
-    <ul>
-      <li><a href="#spenden">Spenden</a></li>
-      <li><a href="#willkommen">Willkommen im Kiez</a></li>
-      <li><a href="#aktionen">Aktionen</a></li>
-      <li><a href="#helfen-im-andere-kiez">Helfen in einem anderen Kiez</a></li>
-      <li><a href="#tweets">Twitter feed</a></li>
-    </ul>
-  </nav>
-
+{{ partial "header.html" . }}
   <div class="page-content">
     <section id="spenden">
       <header>

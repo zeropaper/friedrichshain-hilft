@@ -3,13 +3,14 @@
 <head>
   {{ partial "html-head-meta" . }}
 </head>
-<body>
-{{ partial "menu.html" . }}
+<body {{ if .IsHome }}class="home"{{ end }}>
 <div class="page-wrapper">
   <header>
-    <a class="site-link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    <h1>{{ .Title }}</h1>
-    <div class="hidden-xs">
+    <a href="{{ .Site.BaseURL }}" class="col-xs-3 logo"></a>
+    <h1 class="col-xs-9 col-sm-6"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+    <div class="hidden-xs col-sm-3">
       {{ partial "quick-links.html" . }}
     </div>
   </header>
+
+  {{ partial "menu.html" . }}
