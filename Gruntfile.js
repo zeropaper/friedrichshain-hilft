@@ -109,7 +109,7 @@ module.exports = function (grunt) {
 
     // -----------------------------------------------
 
-    clean: ['.tmp'],
+    clean: ['.tmp', 'public'],
 
     gitclone: {
       dist: {
@@ -160,7 +160,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build', ['copy', 'less:styles', 'browserify:scripts']);
+  grunt.registerTask('build', ['clean', 'copy', 'less:styles', 'browserify:scripts']);
 
   grunt.registerTask('optimize', [
     'uglify:scripts',
